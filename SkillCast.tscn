@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://pic/reimu.png" type="Texture" id=1]
+[ext_resource path="res://script/scene object/SkillCast.gd" type="Script" id=2]
+[ext_resource path="res://pic/chen.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "skillCast"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 0.34151, 0.574349, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1024, 50 ), Vector2( 1024, 600 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 4.14106, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "remove_and_skip"
+} ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+texture = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+rect_pivot_offset = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/skillCast = SubResource( 1 )

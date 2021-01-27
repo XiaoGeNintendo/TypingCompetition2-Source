@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hostlov.ogg-e701c5c4bcc450a1d90b8fa1ce33d601.oggstr"
+
+[deps]
+
+source_file="res://audio/hostlov.ogg"
+dest_files=[ "res://.import/hostlov.ogg-e701c5c4bcc450a1d90b8fa1ce33d601.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

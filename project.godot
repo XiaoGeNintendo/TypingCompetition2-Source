@@ -1,0 +1,324 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "CharacterBase",
+"class": "Alice",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/Alice.gd"
+}, {
+"base": "Reference",
+"class": "CharGroup",
+"language": "GDScript",
+"path": "res://script/characters/CharGroup.gd"
+}, {
+"base": "Object",
+"class": "Character",
+"language": "GDScript",
+"path": "res://script/characters/Character.gd"
+}, {
+"base": "Reference",
+"class": "CharacterBase",
+"language": "GDScript",
+"path": "res://script/characters/CharacterBase.gd"
+}, {
+"base": "CharacterBase",
+"class": "Chen",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/Chen.gd"
+}, {
+"base": "CharacterBase",
+"class": "Cirno",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/Cirno.gd"
+}, {
+"base": "CharacterBase",
+"class": "Eirin",
+"language": "GDScript",
+"path": "res://script/characters/Groups/IN/Eirin.gd"
+}, {
+"base": "CharGroup",
+"class": "EoSDGroup",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/EoSDGroup.gd"
+}, {
+"base": "CharacterBase",
+"class": "Flandre",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/Flandore.gd"
+}, {
+"base": "Status",
+"class": "GDBuff",
+"language": "GDScript",
+"path": "res://script/characters/GDBuff.gd"
+}, {
+"base": "Status",
+"class": "GDRBuff",
+"language": "GDScript",
+"path": "res://script/characters/GDRBuff.gd"
+}, {
+"base": "Status",
+"class": "GSBuff",
+"language": "GDScript",
+"path": "res://script/characters/GSBuff.gd"
+}, {
+"base": "CharGroup",
+"class": "INGroup",
+"language": "GDScript",
+"path": "res://script/characters/Groups/IN/INGroup.gd"
+}, {
+"base": "CharacterBase",
+"class": "Inaba",
+"language": "GDScript",
+"path": "res://script/characters/Groups/IN/Inaba.gd"
+}, {
+"base": "CharacterBase",
+"class": "Kaguya",
+"language": "GDScript",
+"path": "res://script/characters/Groups/IN/Kaguya.gd"
+}, {
+"base": "CharacterBase",
+"class": "Keine",
+"language": "GDScript",
+"path": "res://script/characters/Groups/IN/Keine.gd"
+}, {
+"base": "CharacterBase",
+"class": "Lorelei",
+"language": "GDScript",
+"path": "res://script/characters/Groups/IN/Lorelei.gd"
+}, {
+"base": "CharacterBase",
+"class": "Lunasa",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/Lunasa.gd"
+}, {
+"base": "CharacterBase",
+"class": "Lyrica",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/Lyrica.gd"
+}, {
+"base": "CharGroup",
+"class": "MainGroup",
+"language": "GDScript",
+"path": "res://script/characters/Groups/Main/MainGroup.gd"
+}, {
+"base": "CharacterBase",
+"class": "Marisa",
+"language": "GDScript",
+"path": "res://script/characters/Groups/Main/Marisa.gd"
+}, {
+"base": "CharacterBase",
+"class": "Meiling",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/Meiling.gd"
+}, {
+"base": "CharacterBase",
+"class": "Merlin",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/Merlin.gd"
+}, {
+"base": "CharacterBase",
+"class": "Mokou",
+"language": "GDScript",
+"path": "res://script/characters/Groups/IN/Mokou.gd"
+}, {
+"base": "CharacterBase",
+"class": "Nightbug",
+"language": "GDScript",
+"path": "res://script/characters/Groups/IN/Nightbug.gd"
+}, {
+"base": "CharGroup",
+"class": "PCBGroup",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/PCBGroup.gd"
+}, {
+"base": "CharacterBase",
+"class": "Patchouli",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/Patchouli.gd"
+}, {
+"base": "CharacterBase",
+"class": "Ran",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/Ran.gd"
+}, {
+"base": "CharacterBase",
+"class": "Reimu",
+"language": "GDScript",
+"path": "res://script/characters/Groups/Main/Reimu.gd"
+}, {
+"base": "CharacterBase",
+"class": "Reisen",
+"language": "GDScript",
+"path": "res://script/characters/Groups/IN/Reisen.gd"
+}, {
+"base": "CharacterBase",
+"class": "Remilia",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/Remilia.gd"
+}, {
+"base": "CharacterBase",
+"class": "Rumia",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/Rumia.gd"
+}, {
+"base": "CharacterBase",
+"class": "Sakuya",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/Sakuya.gd"
+}, {
+"base": "Object",
+"class": "Status",
+"language": "GDScript",
+"path": "res://script/characters/Status.gd"
+}, {
+"base": "Status",
+"class": "TimestopBuff",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/Timestop.gd"
+}, {
+"base": "CharacterBase",
+"class": "Whiterock",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/Whiterock.gd"
+}, {
+"base": "CharacterBase",
+"class": "Youmu",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/Youmu.gd"
+}, {
+"base": "CharacterBase",
+"class": "Yukari",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/Yukari.gd"
+}, {
+"base": "CharacterBase",
+"class": "Yuyuko",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/Yuyuko.gd"
+}, {
+"base": "Status",
+"class": "YuyukoBuff",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/YuyukoBuff.gd"
+} ]
+_global_script_class_icons={
+"Alice": "",
+"CharGroup": "",
+"Character": "",
+"CharacterBase": "",
+"Chen": "",
+"Cirno": "",
+"Eirin": "",
+"EoSDGroup": "",
+"Flandre": "",
+"GDBuff": "",
+"GDRBuff": "",
+"GSBuff": "",
+"INGroup": "",
+"Inaba": "",
+"Kaguya": "",
+"Keine": "",
+"Lorelei": "",
+"Lunasa": "",
+"Lyrica": "",
+"MainGroup": "",
+"Marisa": "",
+"Meiling": "",
+"Merlin": "",
+"Mokou": "",
+"Nightbug": "",
+"PCBGroup": "",
+"Patchouli": "",
+"Ran": "",
+"Reimu": "",
+"Reisen": "",
+"Remilia": "",
+"Rumia": "",
+"Sakuya": "",
+"Status": "",
+"TimestopBuff": "",
+"Whiterock": "",
+"Youmu": "",
+"Yukari": "",
+"Yuyuko": "",
+"YuyukoBuff": ""
+}
+
+[application]
+
+config/name="TypingCompetition2"
+config/description="Every loves typing competition or pressing competition?"
+run/main_scene="res://start.tscn"
+boot_splash/image="res://hhs.png"
+config/icon="res://hhs.png"
+config/windows_native_icon="res://hhs.ico"
+
+[autoload]
+
+Global="*res://script/Global.gd"
+AvailableCharacters="*res://script/characters/AvailableCharacters.gd"
+
+[input]
+
+p1_defense={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p1_gauge={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p1_attack={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p1_skill={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p2_defense={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":76,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p2_skill={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":75,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p2_attack={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":74,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p2_gauge={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":73,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p1_confirm={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":81,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p2_confirm={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

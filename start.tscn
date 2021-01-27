@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://script/scene object/StartButton.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Russell Square Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+use_mipmaps = true
+font_data = SubResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1023.0
+margin_bottom = 588.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 1023.0
+margin_bottom = 167.0
+custom_fonts/font = SubResource( 2 )
+text = "Typing Competition 2
+~ Touhou Edition ~"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+margin_top = 171.0
+margin_right = 1023.0
+margin_bottom = 558.0
+custom_fonts/font = ExtResource( 1 )
+text = "How to play:
+
+Player 1: WASD
+Player 2: IJKL
+
+In game:
+W/I - fill skill gauge
+A/L - heal
+D/J - attack
+S/K - use skill (when possible)
+
+In Menu:
+WS/IK - change character group
+AD/JL - change character
+Q/P - ready/cancel"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_top = 562.0
+margin_right = 1023.0
+margin_bottom = 591.0
+custom_fonts/font = ExtResource( 1 )
+text = "Start Game Now!"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="_on_Button_pressed"]

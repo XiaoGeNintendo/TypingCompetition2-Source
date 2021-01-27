@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://PlayerSubview.tscn" type="PackedScene" id=1]
+[ext_resource path="res://script/scene object/charChoose.gd" type="Script" id=2]
+[ext_resource path="res://audio/choose.ogg" type="AudioStream" id=3]
+[ext_resource path="res://font.tres" type="DynamicFont" id=4]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="HBox" type="HBoxContainer" parent="."]
+margin_right = 1010.0
+margin_bottom = 592.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftSubview" parent="HBox" instance=ExtResource( 1 )]
+margin_left = 1.0
+margin_right = 401.0
+
+[node name="MarginContainer" type="MarginContainer" parent="HBox"]
+margin_left = 405.0
+margin_right = 605.0
+margin_bottom = 592.0
+rect_min_size = Vector2( 200, 0 )
+
+[node name="RightSubview" parent="HBox" instance=ExtResource( 1 )]
+margin_left = 609.0
+margin_right = 1009.0
+player = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 500, 0 )
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 451.964
+margin_top = 562.0
+margin_right = 1007.96
+margin_bottom = 586.0
+custom_fonts/font = ExtResource( 4 )
+text = "Now Playing: Reach for the Moon, Immortal Smoke by HDD292"
+__meta__ = {
+"_edit_use_anchors_": false
+}

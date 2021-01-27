@@ -1,0 +1,127 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://pic/reimu.png" type="Texture" id=2]
+[ext_resource path="res://script/scene object/PlayerSubview.gd" type="Script" id=3]
+[ext_resource path="res://CharacterValueView.tscn" type="PackedScene" id=4]
+[ext_resource path="res://script/scene object/PlayerSubviewReady.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Russell Square Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+use_mipmaps = true
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Russell Square Regular.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 100
+use_mipmaps = true
+font_data = SubResource( 3 )
+
+[node name="VBoxContainer" type="Control"]
+margin_left = 0.943878
+margin_right = 304.944
+margin_bottom = 592.0
+rect_min_size = Vector2( 400, 0 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="group" type="Label" parent="."]
+margin_right = 400.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Embodiment of Scarlet Demon"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="."]
+margin_top = 27.0
+margin_right = 400.0
+margin_bottom = 50.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.054902, 1, 0, 1 )
+text = "Scarlet Remilia"
+align = 1
+
+[node name="image" type="TextureRect" parent="."]
+margin_top = 54.0
+margin_right = 400.0
+margin_bottom = 254.0
+rect_min_size = Vector2( 0, 200 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="HP" parent="." instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 258.0
+margin_right = 400.0
+margin_bottom = 283.0
+maxvalue = 1000
+valName = "HP"
+
+[node name="Attack" parent="." instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 287.0
+margin_right = 400.0
+margin_bottom = 312.0
+maxvalue = 5
+valName = "ATK"
+
+[node name="Heal" parent="." instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 316.0
+margin_right = 400.0
+margin_bottom = 341.0
+maxvalue = 5
+valName = "HEAL"
+
+[node name="Skillcost" parent="." instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 345.0
+margin_right = 400.0
+margin_bottom = 370.0
+maxvalue = 1000
+valName = "COST"
+
+[node name="desc" type="Label" parent="."]
+margin_top = 374.0
+margin_right = 400.0
+margin_bottom = 397.0
+rect_min_size = Vector2( 400, 0 )
+custom_fonts/font = SubResource( 2 )
+text = "Character Description will go here"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ready" type="Label" parent="."]
+margin_left = 98.8883
+margin_top = 62.3825
+margin_right = 498.888
+margin_bottom = 199.383
+rect_rotation = 40.3338
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.054902, 1, 0, 1 )
+text = "READY"
+align = 1
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

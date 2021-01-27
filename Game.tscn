@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GameSubview.tscn" type="PackedScene" id=1]
+[ext_resource path="res://script/scene object/GameMainScene.gd" type="Script" id=2]
+[ext_resource path="res://audio/hostlov.ogg" type="AudioStream" id=3]
+[ext_resource path="res://font.tres" type="DynamicFont" id=4]
+[ext_resource path="res://MiddleScene.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 1018.0
+margin_bottom = 597.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Left" parent="HBoxContainer" instance=ExtResource( 1 )]
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 304.0
+margin_right = 404.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Middle" parent="HBoxContainer" instance=ExtResource( 5 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 408.0
+margin_right = 608.0
+margin_bottom = 600.0
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 612.0
+margin_right = 712.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 100, 0 )
+
+[node name="Right" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 716.0
+margin_right = 1016.0
+player = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 504.224, -2.37842 )
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 332.978
+margin_top = 556.549
+margin_right = 625.978
+margin_bottom = 579.549
+custom_fonts/font = ExtResource( 4 )
+text = "Now Playing: Hostlov by HDD292"
+__meta__ = {
+"_edit_use_anchors_": false
+}
