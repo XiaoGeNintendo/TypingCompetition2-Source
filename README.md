@@ -9,3 +9,8 @@ Music is by HDD292, which is under CC-NC-4.0
 Graphics is by kaoru
 
 Graphics and font please refer to their own license
+
+# Link
+[Showcase](https://github.com/XiaoGeNintendo/Pressing-Competition-2)
+
+[Itch](https://xgn.itch.io/pressing-competition-2)
