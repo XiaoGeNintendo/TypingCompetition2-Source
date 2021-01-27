@@ -4,5 +4,6 @@ var chars=[
 	MainGroup.new(),
 	EoSDGroup.new(),
 	PCBGroup.new(),
-	INGroup.new()
+	INGroup.new(),
+	PoFVGroup.new()
 ]

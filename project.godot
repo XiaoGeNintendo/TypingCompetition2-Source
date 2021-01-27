@@ -40,6 +40,11 @@ _global_script_classes=[ {
 "path": "res://script/characters/Groups/EoSD/Cirno.gd"
 }, {
 "base": "CharacterBase",
+"class": "Daiyousei",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/Daiyousei.gd"
+}, {
+"base": "CharacterBase",
 "class": "Eirin",
 "language": "GDScript",
 "path": "res://script/characters/Groups/IN/Eirin.gd"
@@ -48,6 +53,11 @@ _global_script_classes=[ {
 "class": "EoSDGroup",
 "language": "GDScript",
 "path": "res://script/characters/Groups/EoSD/EoSDGroup.gd"
+}, {
+"base": "CharacterBase",
+"class": "ExRumia",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/ExRumia.gd"
 }, {
 "base": "CharacterBase",
 "class": "Flandre",
@@ -90,6 +100,21 @@ _global_script_classes=[ {
 "path": "res://script/characters/Groups/IN/Keine.gd"
 }, {
 "base": "CharacterBase",
+"class": "Koakuma",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/Koakuma.gd"
+}, {
+"base": "CharacterBase",
+"class": "Komachi",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PoFV/Komachi.gd"
+}, {
+"base": "CharacterBase",
+"class": "LilyWhite",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PCB/LilyWhite.gd"
+}, {
+"base": "CharacterBase",
 "class": "Lorelei",
 "language": "GDScript",
 "path": "res://script/characters/Groups/IN/Lorelei.gd"
@@ -113,6 +138,11 @@ _global_script_classes=[ {
 "class": "Marisa",
 "language": "GDScript",
 "path": "res://script/characters/Groups/Main/Marisa.gd"
+}, {
+"base": "CharacterBase",
+"class": "Medicine",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PoFV/Medicine.gd"
 }, {
 "base": "CharacterBase",
 "class": "Meiling",
@@ -144,6 +174,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://script/characters/Groups/EoSD/Patchouli.gd"
 }, {
+"base": "CharGroup",
+"class": "PoFVGroup",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PoFV/PoFVGroup.gd"
+}, {
 "base": "CharacterBase",
 "class": "Ran",
 "language": "GDScript",
@@ -165,6 +200,11 @@ _global_script_classes=[ {
 "path": "res://script/characters/Groups/EoSD/Remilia.gd"
 }, {
 "base": "CharacterBase",
+"class": "Rin",
+"language": "GDScript",
+"path": "res://script/characters/Groups/EoSD/Rin.gd"
+}, {
+"base": "CharacterBase",
 "class": "Rumia",
 "language": "GDScript",
 "path": "res://script/characters/Groups/EoSD/Rumia.gd"
@@ -173,6 +213,11 @@ _global_script_classes=[ {
 "class": "Sakuya",
 "language": "GDScript",
 "path": "res://script/characters/Groups/EoSD/Sakuya.gd"
+}, {
+"base": "CharacterBase",
+"class": "Shikieiki",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PoFV/Shikieiki.gd"
 }, {
 "base": "Object",
 "class": "Status",
@@ -193,6 +238,11 @@ _global_script_classes=[ {
 "class": "Youmu",
 "language": "GDScript",
 "path": "res://script/characters/Groups/PCB/Youmu.gd"
+}, {
+"base": "CharacterBase",
+"class": "Yuka",
+"language": "GDScript",
+"path": "res://script/characters/Groups/PoFV/Yuka.gd"
 }, {
 "base": "CharacterBase",
 "class": "Yukari",
@@ -216,8 +266,10 @@ _global_script_class_icons={
 "CharacterBase": "",
 "Chen": "",
 "Cirno": "",
+"Daiyousei": "",
 "Eirin": "",
 "EoSDGroup": "",
+"ExRumia": "",
 "Flandre": "",
 "GDBuff": "",
 "GDRBuff": "",
@@ -226,27 +278,35 @@ _global_script_class_icons={
 "Inaba": "",
 "Kaguya": "",
 "Keine": "",
+"Koakuma": "",
+"Komachi": "",
+"LilyWhite": "",
 "Lorelei": "",
 "Lunasa": "",
 "Lyrica": "",
 "MainGroup": "",
 "Marisa": "",
+"Medicine": "",
 "Meiling": "",
 "Merlin": "",
 "Mokou": "",
 "Nightbug": "",
 "PCBGroup": "",
 "Patchouli": "",
+"PoFVGroup": "",
 "Ran": "",
 "Reimu": "",
 "Reisen": "",
 "Remilia": "",
+"Rin": "",
 "Rumia": "",
 "Sakuya": "",
+"Shikieiki": "",
 "Status": "",
 "TimestopBuff": "",
 "Whiterock": "",
 "Youmu": "",
+"Yuka": "",
 "Yukari": "",
 "Yuyuko": "",
 "YuyukoBuff": ""
@@ -316,6 +376,16 @@ p1_confirm={
 p2_confirm={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":80,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p1_ai={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
+p2_ai={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":79,"unicode":0,"echo":false,"script":null)
  ]
 }
 

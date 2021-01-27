@@ -5,6 +5,7 @@ func _init().("Perfect Cherry Blossom",[
 	Whiterock.new(),
 	Chen.new(),
 	Alice.new(),
+	LilyWhite.new(),
 	Lunasa.new(),
 	Merlin.new(),
 	Lyrica.new(),

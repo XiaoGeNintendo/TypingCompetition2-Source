@@ -8,6 +8,7 @@ export(Player) var player
 var gId=0
 var cId=0
 var confirm
+var ailvl=0
 
 onready var Characters=get_node("/root/AvailableCharacters")
 
@@ -64,3 +65,9 @@ func _input(event):
 		gId=(gId+1)%ll
 		cId=0
 		reload()
+	if Input.is_action_just_pressed(prefix+"_ai"):
+		ailvl=(ailvl+1)%6
+		if ailvl==0:
+			$ai.text="Player Control"
+		else:
+			$ai.text="AI Lv.%d"%ailvl

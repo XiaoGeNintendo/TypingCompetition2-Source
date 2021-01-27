@@ -7,7 +7,7 @@
 font_path = "res://Russell Square Regular.ttf"
 
 [sub_resource type="DynamicFont" id=2]
-size = 60
+size = 48
 use_mipmaps = true
 font_data = SubResource( 1 )
 
@@ -22,7 +22,7 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 margin_right = 1023.0
-margin_bottom = 167.0
+margin_bottom = 135.0
 custom_fonts/font = SubResource( 2 )
 text = "Typing Competition 2
 ~ Touhou Edition ~"
@@ -33,9 +33,9 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
-margin_top = 171.0
+margin_top = 139.0
 margin_right = 1023.0
-margin_bottom = 558.0
+margin_bottom = 552.0
 custom_fonts/font = ExtResource( 1 )
 text = "How to play:
 
@@ -51,14 +51,15 @@ S/K - use skill (when possible)
 In Menu:
 WS/IK - change character group
 AD/JL - change character
-Q/P - ready/cancel"
+Q/P - ready/cancel
+E/O - toggle AI"
 align = 1
 valign = 1
 
 [node name="Button" type="Button" parent="VBoxContainer"]
-margin_top = 562.0
+margin_top = 556.0
 margin_right = 1023.0
-margin_bottom = 591.0
+margin_bottom = 585.0
 custom_fonts/font = ExtResource( 1 )
 text = "Start Game Now!"
 script = ExtResource( 2 )

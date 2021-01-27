@@ -13,6 +13,8 @@ func onConfirm():
 		var cc=get_node("/root/AvailableCharacters")
 		root.p1=Character.new(cc.chars[left.gId].group[left.cId])
 		root.p1.role=0
+		root.p1.ai=left.ailvl
 		root.p2=Character.new(cc.chars[right.gId].group[right.cId])
 		root.p2.role=1
+		root.p2.ai=right.ailvl
 		get_tree().change_scene("res://Game.tscn")
