@@ -10,6 +10,21 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "CharacterBase",
+"class": "Aki1",
+"language": "GDScript",
+"path": "res://script/characters/Groups/MoF/Aki1.gd"
+}, {
+"base": "CharacterBase",
+"class": "Aki2",
+"language": "GDScript",
+"path": "res://script/characters/Groups/MoF/Aki2.gd"
+}, {
+"base": "Status",
+"class": "AkiBuff",
+"language": "GDScript",
+"path": "res://script/characters/Groups/MoF/AkiBuff.gd"
+}, {
+"base": "CharacterBase",
 "class": "Alice",
 "language": "GDScript",
 "path": "res://script/characters/Groups/PCB/Alice.gd"
@@ -154,6 +169,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://script/characters/Groups/PCB/Merlin.gd"
 }, {
+"base": "CharGroup",
+"class": "MoFGroup",
+"language": "GDScript",
+"path": "res://script/characters/Groups/MoF/MoFGroup.gd"
+}, {
 "base": "CharacterBase",
 "class": "Mokou",
 "language": "GDScript",
@@ -260,6 +280,9 @@ _global_script_classes=[ {
 "path": "res://script/characters/Groups/PCB/YuyukoBuff.gd"
 } ]
 _global_script_class_icons={
+"Aki1": "",
+"Aki2": "",
+"AkiBuff": "",
 "Alice": "",
 "CharGroup": "",
 "Character": "",
@@ -289,6 +312,7 @@ _global_script_class_icons={
 "Medicine": "",
 "Meiling": "",
 "Merlin": "",
+"MoFGroup": "",
 "Mokou": "",
 "Nightbug": "",
 "PCBGroup": "",
