@@ -43,12 +43,13 @@ func _ready():
 
 func _process(delta):
 	# Key Process
-	var ai=pl.AI(pl,enemy)
-	if pl.check("attack",false) || ai==1:
+	pl.keyInit(pl,enemy)
+	
+	if pl.checkAction("attack"):
 		emit_signal("damage_given",enemy,pl.atk)
-	if pl.check("defense",false) || ai==2:
+	if pl.checkAction("defense"):
 		emit_signal("damage_given",pl,-pl.heal)
-	if pl.check("skill",true) and pl.base.skillType==0:
+	if pl.checkAction("skill") and pl.base.skillType==0:
 		if pl.skillGauge>=pl.skillCost:
 			pl.skillGauge-=pl.skillCost
 			$VBoxContainer/Skill.changeValue(pl.skillGauge)
@@ -57,7 +58,7 @@ func _process(delta):
 			
 	# Skill gauge filling
 	var prefix="p"+str(player+1)
-	if pl.check2("gauge",true):
+	if pl.checkAction("gauge"):
 		if pl.skillGauge<1000:
 			pl.skillGauge+=Global.incMana
 		else:

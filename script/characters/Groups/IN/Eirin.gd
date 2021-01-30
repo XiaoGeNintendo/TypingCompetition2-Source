@@ -3,7 +3,7 @@ extends CharacterBase
 class_name Eirin
 
 func onSkill(me,enemy, scene):
-	enemy.status.append(GDRBuff.new("Elixir",600,-200,50,60))
+	me.status.append(GDRBuff.new("Elixir",600,-200,50,60))
 func _init():
 	self.maxhp=450
 	self.atk=1

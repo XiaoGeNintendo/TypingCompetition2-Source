@@ -4,9 +4,9 @@ class_name Chen
 
 func onSkill(me,enemy,scene):
 	var prefix="p"+str(me.role+1)
-	if me.check("attack",true):
+	if me.checkB2("attack",true):
 		enemy.status.append(GDBuff.new("Cats!!",900,60,300))
-	elif me.check("defense",true):
+	elif me.checkB2("defense",true):
 		me.status.append(GDBuff.new("Cats!!",900,-60,300))
 	else:
 		scene.emit_signal("damage_given",me,10)

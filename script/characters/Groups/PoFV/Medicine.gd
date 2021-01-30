@@ -3,7 +3,7 @@ extends CharacterBase
 class_name Medicine
 
 func onSkill(me,enemy,scene):
-	if enemy.check("attack",false):
+	if enemy.checkAction("attack"):
 		scene.emit_signal("damage_given",enemy,1)
 func _init():
 	self.maxhp=475
