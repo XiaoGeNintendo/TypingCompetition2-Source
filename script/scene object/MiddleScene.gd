@@ -8,6 +8,7 @@ func _ready():
 	$Tween.interpolate_property($Label,"custom_colors/font_color",Color.green,Color.red,PHASE_TIME)
 	$Tween.start()
 	glb.incMana=2
+	glb.decMana=1
 	glb.death=0
 	pass # Replace with function body.
 

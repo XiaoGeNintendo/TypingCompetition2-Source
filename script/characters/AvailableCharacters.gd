@@ -6,5 +6,6 @@ var chars=[
 	PCBGroup.new(),
 	INGroup.new(),
 	PoFVGroup.new(),
-	MoFGroup.new()
+	MoFGroup.new(),
+	SAGroup.new()
 ]

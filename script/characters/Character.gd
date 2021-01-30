@@ -17,6 +17,10 @@ var ai: int #AI Level 0=player
 
 var key: int
 
+func initVar(key,value):
+	if not key in vars:
+		vars[key]=value
+	
 func keyInit(me,enemy):
 	key=0
 	if ai==0:
