@@ -3,6 +3,8 @@ extends CharacterBase
 class_name Rin
 
 func onSkill(me,enemy,scene):
+	if enemy.base.name=="Satsuki Rin": # @Zzzyt
+		return
 	enemy.base.onSkill(me,enemy,scene)
 	
 func _init():

@@ -3,8 +3,15 @@ extends CharacterBase
 class_name Reisen
 
 func onSkill(me,enemy, scene):
-	enemy.atk=-enemy.atk
-	enemy.heal=-enemy.heal
+	if not "RSframe" in me.vars:
+		me.vars["RSframe"]=0
+	me.vars["RSframe"]+=1
+	if me.vars["RSframe"]%5==0:
+		enemy.atk=-abs(enemy.atk)
+		enemy.heal=-abs(enemy.heal)
+	else:
+		enemy.atk=abs(enemy.atk)
+		enemy.heal=abs(enemy.heal)
 func _init():
 	self.maxhp=777
 	self.atk=3

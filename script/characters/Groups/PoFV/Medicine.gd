@@ -16,5 +16,4 @@ func _init():
 	self.desc="""
 [Passive]Skill: Poison of Envy
 When enemy attacks, always deal 1 damage to herself.
-Doesn't work on AI because they are robot which are not affected by poison.
 """

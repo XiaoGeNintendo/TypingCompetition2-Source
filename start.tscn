@@ -24,7 +24,7 @@ __meta__ = {
 margin_right = 1023.0
 margin_bottom = 135.0
 custom_fonts/font = SubResource( 2 )
-text = "Typing Competition 2
+text = "Pressing Competition 2
 ~ Touhou Edition ~"
 align = 1
 valign = 1
