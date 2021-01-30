@@ -14,3 +14,6 @@ Graphics and font please refer to their own license
 [Showcase](https://github.com/XiaoGeNintendo/Pressing-Competition-2)
 
 [Itch](https://xgn.itch.io/pressing-competition-2)
+
+# Building and Modding
+[Guide](https://xiaogenintendo.github.io/2021/01/28/Adding-Chars-In-PC2/)
