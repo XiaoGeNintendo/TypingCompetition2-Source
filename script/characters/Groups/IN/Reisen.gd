@@ -24,4 +24,5 @@ func _init():
 [Passive] Skill: Lunatic Reverse
 Sometimes enemy's heal will be damaging herself
 Sometimes enemy's attack will heal you
+(Around 20%)
 """

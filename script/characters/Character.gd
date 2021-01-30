@@ -21,7 +21,7 @@ func keyInit(me,enemy):
 	key=0
 	if ai==0:
 		key|=int(checkA1("attack"))
-		key|=(int(checkA1("heal"))<<1)
+		key|=(int(checkA1("defense"))<<1)
 		key|=(int(checkA2("gauge"))<<2)
 		key|=(int(checkA1("skill"))<<3)
 	else:
