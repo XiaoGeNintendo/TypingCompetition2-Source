@@ -1,7 +1,8 @@
 extends Button
 
+func on_Credit():
+	get_tree().change_scene("res://credit.tscn")
 
 
-func _on_Button_pressed():
+func on_Start():
 	get_tree().change_scene("res://charChoose.tscn")
-	

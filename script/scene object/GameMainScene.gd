@@ -18,3 +18,17 @@ func skill(user):
 func dealDmg(user, amount):
 	if user.hp-amount<=0:
 		get_tree().change_scene("res://endScene.tscn")
+		
+func _input(event):
+	if Input.is_action_just_pressed("pause"):
+		$pause.show()
+		get_tree().paused=true
+
+func _on_Button_pressed():
+	$pause.hide()
+	get_tree().paused=false
+
+
+func _on_Button3_pressed():
+	get_tree().paused=false
+	get_tree().change_scene("res://start.tscn")

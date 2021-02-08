@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://hhs.png" type="Texture" id=2]
+[ext_resource path="res://script/scene object/Credit Button.gd" type="Script" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_top = 36.0217
+margin_right = 282.0
+margin_bottom = 553.022
+custom_fonts/font = ExtResource( 1 )
+text = "Pressing Competition 2
+A production of HHS 2021
+-=Code & Character Design=-
+XGN
+
+-=Music=-
+HDD
+
+-=Playtest=-
+Monkey king
+Zzzyt
+Yujie Ma
+Zhuky.RLG
+
+-=Graphics=-
+Kaoru
+
+-=Special Thanks=-
+ZUN from Team Shanghai Alice
+Godot Dev Team
+and you!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 423.785
+margin_top = 36.0217
+margin_right = 1073.79
+margin_bottom = 625.022
+texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 453.0
+margin_top = 555.0
+margin_right = 891.0
+margin_bottom = 588.0
+custom_fonts/font = ExtResource( 1 )
+text = "I appreciate your work! Now can I go back?"
+script = ExtResource( 3 )
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
