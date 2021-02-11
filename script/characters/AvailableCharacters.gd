@@ -8,5 +8,6 @@ var chars=[
 	PoFVGroup.new(),
 	MoFGroup.new(),
 	SAGroup.new(),
-	UFOGroup.new()
+	UFOGroup.new(),
+	TDGroup.new()
 ]
