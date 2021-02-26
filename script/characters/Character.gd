@@ -53,7 +53,7 @@ func AI(me,enemy):
 		return 0
 	var prioA=((enemy.maxhp-enemy.hp)*2+me.hp)*me.atk/5
 	var prioB=((me.maxhp-me.hp)*2+enemy.hp)*me.heal/5
-	if randi()%(prioA+prioB)<prioA:
+	if randi()%(prioA+prioB+1)<prioA:
 		return 1
 	else:
 		return 2

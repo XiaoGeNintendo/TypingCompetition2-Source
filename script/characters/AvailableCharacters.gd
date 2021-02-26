@@ -9,5 +9,6 @@ var chars=[
 	MoFGroup.new(),
 	SAGroup.new(),
 	UFOGroup.new(),
-	TDGroup.new()
+	TDGroup.new(),
+	DDCGroup.new()
 ]
