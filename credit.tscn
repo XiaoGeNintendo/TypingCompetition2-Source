@@ -11,9 +11,10 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="."]
-margin_top = 36.0217
-margin_right = 282.0
-margin_bottom = 553.022
+margin_left = 6.35681
+margin_top = 19.0703
+margin_right = 288.357
+margin_bottom = 588.07
 custom_fonts/font = ExtResource( 1 )
 text = "Pressing Competition 2
 A production of HHS 2021
@@ -31,6 +32,7 @@ Zhuky.RLG
 
 -=Graphics=-
 Kaoru
+Diari
 
 -=Special Thanks=-
 ZUN from Team Shanghai Alice
@@ -68,4 +70,7 @@ THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMP
 Portions of this software are copyright © 2021 The FreeType Project (www.freetype.org). All rights reserved.
 "
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
