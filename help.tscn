@@ -22,7 +22,7 @@ Each with a HP bar and gauge bar
 When your HP is lower than 0, you die and your opponent wins
 When your gauge fulfills your skill cost, a skill is ready for use!
 After some time, gauge refill speed will increase and will enter sudden death mode.
-
+*1 second= 60 frames
 -=Control (In Menu)=-
 Player 1:
 W/S - change group/game

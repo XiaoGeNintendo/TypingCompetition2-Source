@@ -15,7 +15,7 @@ onready var Characters=get_node("/root/AvailableCharacters")
 signal player_confirmed
 
 func _ready():
-	if player==Player.PLAYER_2:
+	if player%2==1:
 		$image.flip_h=true
 	reload()
 	$ready.visible=false

@@ -3,7 +3,6 @@ extends Node2D
 func _ready():
 	$HBox/LeftSubview.connect("player_confirmed",self,"onConfirm")
 	$HBox/RightSubview.connect("player_confirmed",self,"onConfirm")
-	print("Hello")
 
 func onConfirm():
 	var left=$HBox/LeftSubview
