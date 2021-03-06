@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://script/scene object/Credit Button.gd" type="Script" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 5.0
+margin_top = 19.4126
+margin_right = 481.0
+margin_bottom = 588.413
+custom_fonts/font = ExtResource( 1 )
+text = "-=Objective=-
+Played by 2
+Each with a HP bar and gauge bar
+When your HP is lower than 0, you die and your opponent wins
+When your gauge fulfills your skill cost, a skill is ready for use!
+After some time, gauge refill speed will increase and will enter sudden death mode.
+
+-=Control (In Menu)=-
+Player 1:
+W/S - change group/game
+A/D - change character
+Q - confirm
+E - toggle AI level
+Player 2:
+I/K - change group/game
+J/L - change character
+P - confirm
+U - toggle AI level"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 501.856
+margin_top = 13.063
+margin_right = 977.856
+margin_bottom = 582.063
+custom_fonts/font = ExtResource( 1 )
+text = "-=Control (Gameplay)=-
+D/J - attack
+A/L - heal
+W/I - (hold) refill gauge
+S/K - use skill (if possible)
+Space - pause
+
+-=Minion=-
+When you deal damage or are damaged, your MINION gauge will increase and when it's full, the minion's skill will be AUTOMATICALLY called."
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 453.0
+margin_top = 555.0
+margin_right = 891.0
+margin_bottom = 588.0
+custom_fonts/font = ExtResource( 1 )
+text = "Back"
+script = ExtResource( 3 )
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]

@@ -13,7 +13,7 @@ var cast=load("res://SkillCast.tscn")
 func skill(user):
 	var ins=cast.instance()
 	ins.texture=load(user.base.image)
-	ins.flip=user==Global.p2
+	ins.flip=user.role==1
 	add_child(ins)
 func dealDmg(user, amount):
 	if user.hp-amount<=0:

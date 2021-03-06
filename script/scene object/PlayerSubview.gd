@@ -1,6 +1,6 @@
 extends Control
 
-enum Player {PLAYER_1,PLAYER_2}
+enum Player {PLAYER_1,PLAYER_2,SUB_1,SUB_2}
 
 #Which player is playing this subview
 export(Player) var player
@@ -19,6 +19,11 @@ func _ready():
 		$image.flip_h=true
 	reload()
 	$ready.visible=false
+	if player>=Player.SUB_1:
+		$HP.visible=false
+		$Attack.visible=false
+		$Heal.visible=false
+		$ai.visible=false
 	
 func reload():
 	var cb=Characters.chars[gId].group[cId]
@@ -31,12 +36,13 @@ func reload():
 	$Skillcost.changeValue(cb.skillCost)
 	$desc.text=cb.desc
 	
+		
 func _input(event):
-	var prefix="p"+str(player+1)
-	
+	update()
+	var prefix="p"+str(player%2+1)
+		
 	var l=len(Characters.chars[gId].group)
 	var ll=len(Characters.chars)
-	
 	
 	if Input.is_action_just_pressed(prefix+"_confirm"):
 		confirm=not confirm
@@ -45,6 +51,7 @@ func _input(event):
 	
 	if confirm:
 		return
+		
 	if Input.is_action_just_pressed(prefix+"_attack"):
 		cId+=1
 		if cId==l:
@@ -65,7 +72,7 @@ func _input(event):
 		gId=(gId+1)%ll
 		cId=0
 		reload()
-	if Input.is_action_just_pressed(prefix+"_ai"):
+	if player<Player.SUB_1 and Input.is_action_just_pressed(prefix+"_ai"):
 		ailvl=(ailvl+1)%6
 		if ailvl==0:
 			$ai.text="Player Control"

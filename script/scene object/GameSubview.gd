@@ -5,7 +5,9 @@ enum Player {PLAYER_1,PLAYER_2}
 export(Player) var player
 
 var pl: Character
+var sub: Character
 var enemy: Character
+var enemySub: Character
 
 var dsc = preload("res://damageDisplay.tscn")
 
@@ -17,6 +19,8 @@ func dealDmg(person, damage):
 	if person==pl:
 		person.hp-=damage
 		person.hp=clamp(person.hp,0,person.maxhp)
+		sub.skillGauge+=max(0,damage)
+		
 		$VBoxContainer/HP.changeValue(person.hp)
 		$VBoxContainer/danger.visible=(person.hp<=person.maxhp*0.2)
 		
@@ -30,15 +34,22 @@ func dealDmg(person, damage):
 func _ready():
 	if player==Player.PLAYER_1:
 		pl=Global.p1
+		sub=Global.s1
 		enemy=Global.p2
+		enemySub=Global.s2
 	else:
 		pl=Global.p2
+		sub=Global.s2
 		enemy=Global.p1
+		enemySub=Global.s1
 		$VBoxContainer/TextureRect.flip_h=true
+		$Minion/TextureRect.flip_h=true
 	
 	$VBoxContainer/HP.changeValue(pl.hp)
 	$VBoxContainer/danger.visible=false
 	$VBoxContainer/TextureRect.texture=load(pl.base.image)
+	$Minion.minion=sub
+	
 	connect("damage_given",self,"dealDmg")
 
 func _process(delta):
@@ -47,13 +58,14 @@ func _process(delta):
 	
 	if pl.checkAction("attack"):
 		emit_signal("damage_given",enemy,pl.atk)
+		sub.skillGauge+=10
 	if pl.checkAction("defense"):
 		emit_signal("damage_given",pl,-pl.heal)
 	if pl.checkAction("skill") and pl.base.skillType==0:
 		if pl.skillGauge>=pl.skillCost:
 			pl.skillGauge-=pl.skillCost
 			$VBoxContainer/Skill.changeValue(pl.skillGauge)
-			pl.base.onSkill(pl,enemy,self)
+			pl.base.skillB(pl,sub,enemy,enemySub,self,false)
 			emit_signal("skill_used",pl)
 			
 	# Skill gauge filling
@@ -76,7 +88,7 @@ func _process(delta):
 		$VBoxContainer/skR.set("custom_colors/font_color",Color.red)
 	
 	if pl.base.skillType==1:
-		pl.base.onSkill(pl,enemy,self)
+		pl.base.skillB(pl,sub,enemy,enemySub,self,false)
 	
 	$VBoxContainer/Skill.changeValue(pl.skillGauge)
 	
@@ -96,6 +108,12 @@ func _process(delta):
 			pl.status.remove(index)
 		else:
 			index+=1
+	
+	# Minion
+	if sub.skillGauge>=sub.skillCost:
+		sub.base.skillB(pl,sub,enemy,enemySub,self,true)
+		sub.skillGauge=0
+		emit_signal("skill_used",sub)
 	
 	# Sudden death
 	if Global.death>0 and randi()%5==0:

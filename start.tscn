@@ -87,5 +87,17 @@ text = "Credit"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CC2" type="Button" parent="."]
+margin_left = 854.022
+margin_top = 3.17479
+margin_right = 1025.02
+margin_bottom = 40.1748
+custom_fonts/font = ExtResource( 1 )
+text = "How to play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="on_Start"]
 [connection signal="pressed" from="CC" to="VBoxContainer/Button" method="on_Credit"]
+[connection signal="pressed" from="CC2" to="VBoxContainer/Button" method="_on_CC2_pressed"]
