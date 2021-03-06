@@ -12,6 +12,7 @@ func _init():
 	self.skillCost=1
 	self.image="res://pic/shinmyoumaru.png"
 	self.heal=1
+	self.nosub=true
 	self.desc="""
 Skill: 7 tiny man
 Increase maxhp by 2

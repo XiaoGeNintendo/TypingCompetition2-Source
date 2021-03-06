@@ -8,7 +8,7 @@ func _init():
 	self.maxhp=990
 	self.atk=2
 	self.name="Yakumo Ran"
-	self.skillCost=880
+	self.skillCost=1880
 	self.image="res://pic/ran.png"
 	self.heal=2
 	self.desc="""

@@ -20,6 +20,7 @@ func _init():
 	self.skillCost=10
 	self.image="res://pic/nazrin.png"
 	self.heal=0
+	self.nosub=true
 	self.desc="""
 Skill: Treasure Hunter
 Increase attack by 1 or

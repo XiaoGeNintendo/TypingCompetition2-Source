@@ -20,6 +20,7 @@ func _init():
 	self.skillCost=1
 	self.image="res://pic/hecatia.png"
 	self.heal=3
+	self.nosub=true
 	self.desc="""
 Skill: Welcome to hell
 Switch between three modes:

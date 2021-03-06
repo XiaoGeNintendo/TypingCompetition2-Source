@@ -17,6 +17,7 @@ func _init():
 	self.skillCost=2000
 	self.image="res://pic/utsuho.png"
 	self.heal=0
+	self.nosub=true
 	self.desc="""
 Skill: Hell and Heaven Meltdown
 -=CAUTION CAUTION CAUTION CAUTION CAUTION=-

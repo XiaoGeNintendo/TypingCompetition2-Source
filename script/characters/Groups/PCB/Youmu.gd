@@ -12,6 +12,7 @@ func _init():
 	self.skillCost=900
 	self.image="res://pic/youmu.png"
 	self.heal=2
+	self.nosub=true
 	self.desc="""
 Skill: Strike of hyperdeath
 The enemy loses 1/2 of his current health

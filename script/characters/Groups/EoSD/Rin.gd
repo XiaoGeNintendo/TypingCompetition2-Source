@@ -2,10 +2,10 @@ extends CharacterBase
 
 class_name Rin
 
-func onSkill(me,enemy,scene):
-	if enemy.base.name=="Satsuki Rin": # @Zzzyt
+func onSkillA(a,b,c,d,e,f):
+	if c.base.name=="Satsuki Rin": # @Zzzyt
 		return
-	enemy.base.onSkill(me,enemy,scene)
+	c.base.skillB(a,b,c,d,e,f)
 	
 func _init():
 	self.maxhp=5500
@@ -14,6 +14,7 @@ func _init():
 	self.skillCost=50
 	self.image="res://pic/rin.png"
 	self.heal=15
+	self.version=1
 	self.desc="""
 Skill: Natural Possession
 Use enemy's skill but with low cost.

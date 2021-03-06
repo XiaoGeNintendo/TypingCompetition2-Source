@@ -53,7 +53,8 @@ S/K - use skill (if possible)
 Space - pause
 
 -=Minion=-
-When you deal damage or are damaged, your MINION gauge will increase and when it's full, the minion's skill will be AUTOMATICALLY called."
+When you deal damage or are damaged, your MINION gauge will increase and when it's full, the minion's skill will be AUTOMATICALLY called.
+Note that all effects(like increase cost) only affect MASTER, not MINION. Minions don't have health and attack"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false

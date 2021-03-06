@@ -14,6 +14,7 @@ func _init():
 	self.skillCost=1
 	self.image="res://pic/sagume.png"
 	self.heal=1
+	self.nosub=true
 	self.desc="""
 Skill: Not to believe
 swap skill gauge increase speed and decrease speed

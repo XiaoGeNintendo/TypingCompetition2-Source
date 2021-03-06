@@ -8,6 +8,8 @@ var skillCost: int
 var name: String
 var image: String
 var desc: String
+# not suitable for minion
+var nosub = false
 # 0 is normal, 1 is passive
 var skillType: int = 0 
 # 0 is old(<1.10), 1 is new (>=1.10)

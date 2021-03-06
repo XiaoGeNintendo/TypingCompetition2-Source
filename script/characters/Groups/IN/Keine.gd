@@ -24,6 +24,7 @@ func _init():
 	self.skillCost=1
 	self.image="res://pic/keine.png"
 	self.heal=3
+	self.nosub=true
 	self.desc="""
 Skill: History Eater
 When used for the first time, save current HP (cost 1 gauge only)

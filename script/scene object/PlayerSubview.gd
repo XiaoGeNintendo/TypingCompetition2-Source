@@ -34,8 +34,15 @@ func reload():
 	$Attack.changeValue(cb.atk)
 	$Heal.changeValue(cb.heal)
 	$Skillcost.changeValue(cb.skillCost)
-	$desc.text=cb.desc
-	
+	if player>=Player.SUB_1:
+		if cb.skillType!=0:
+			$desc.text="!!Passive skill is disabled in minion mode!!"
+		elif cb.nosub:
+			$desc.text="!!This character is disabled in minion mode!!"
+		else:
+			$desc.text=cb.desc
+	else:
+		$desc.text=cb.desc
 		
 func _input(event):
 	update()
@@ -45,9 +52,11 @@ func _input(event):
 	var ll=len(Characters.chars)
 	
 	if Input.is_action_just_pressed(prefix+"_confirm"):
-		confirm=not confirm
-		$ready.visible=confirm
-		emit_signal("player_confirmed")
+		var cb=Characters.chars[gId].group[cId]
+		if player<Player.SUB_1 or cb.skillType==0 and cb.nosub==false:
+			confirm=not confirm
+			$ready.visible=confirm
+			emit_signal("player_confirmed")
 	
 	if confirm:
 		return
