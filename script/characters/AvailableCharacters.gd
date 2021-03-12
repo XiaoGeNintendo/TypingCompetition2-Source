@@ -12,5 +12,6 @@ var chars=[
 	TDGroup.new(),
 	DDCGroup.new(),
 	LoLKGroup.new(),
-	HSiFSGroup.new()
+	HSiFSGroup.new(),
+	WBaWCGroup.new()
 ]
