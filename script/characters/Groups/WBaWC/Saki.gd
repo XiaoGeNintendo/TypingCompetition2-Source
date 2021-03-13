@@ -4,7 +4,7 @@ class_name Saki
 
 func onSkillA(me,sub,enemy,es,scene,isSub):
 	enemy.status.append(GDRBuff.new("UFS",60,2,5,5))
-	me.status.append(GDRBuff.new("UFS",60,1,2,5))
+	me.status.append(GDRBuff.new("AUFS",60,1,2,5))
 	
 func _init():
 	self.maxhp=996

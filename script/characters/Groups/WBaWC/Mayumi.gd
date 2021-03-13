@@ -9,7 +9,7 @@ func _init():
 	self.maxhp=625
 	self.atk=3
 	self.name="Joutougu Mayumi"
-	self.skillCost=2000
+	self.skillCost=1500
 	self.image="res://pic/mayumi.png"
 	self.heal=1
 	self.version=1

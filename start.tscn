@@ -43,35 +43,25 @@ __meta__ = {
 [node name="Label2" type="Label" parent="VBoxContainer"]
 margin_top = 139.0
 margin_right = 1023.0
-margin_bottom = 527.0
+margin_bottom = 159.0
 custom_fonts/font = SubResource( 4 )
-text = "How to play:
-
-Player 1: WASD
-Player 2: IJKL
-
-In game:
-W/I - fill skill gauge
-A/L - heal
-D/J - attack
-S/K - use skill (when possible)
-Space to pause
-
-In Menu:
-WS/IK - change character group
-AD/JL - change character
-Q/P - ready/cancel
-E/O - toggle AI"
+text = "Version 1.11"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-margin_top = 531.0
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 163.0
 margin_right = 1023.0
-margin_bottom = 560.0
+margin_bottom = 563.0
+rect_min_size = Vector2( 1000, 400 )
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_top = 567.0
+margin_right = 1023.0
+margin_bottom = 596.0
 custom_fonts/font = ExtResource( 1 )
 text = "Start Game Now!"
 script = ExtResource( 2 )
@@ -80,8 +70,11 @@ __meta__ = {
 }
 
 [node name="CC" type="Button" parent="."]
-margin_right = 171.0
-margin_bottom = 37.0
+margin_left = 3.1748
+margin_top = 1.5874
+margin_right = 174.175
+margin_bottom = 38.5874
+rect_pivot_offset = Vector2( 179.675, 42.5891 )
 custom_fonts/font = ExtResource( 1 )
 text = "Credit"
 __meta__ = {
@@ -89,15 +82,29 @@ __meta__ = {
 }
 
 [node name="CC2" type="Button" parent="."]
-margin_left = 854.022
-margin_top = 3.17479
-margin_right = 1025.02
-margin_bottom = 40.1748
+margin_left = 3.1748
+margin_top = 38.5874
+margin_right = 174.173
+margin_bottom = 75.5874
+rect_pivot_offset = Vector2( 178.087, 4.49147 )
 custom_fonts/font = ExtResource( 1 )
 text = "How to play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CC3" type="Button" parent="."]
+margin_left = 3.1748
+margin_top = 75.5874
+margin_right = 174.173
+margin_bottom = 112.587
+rect_pivot_offset = Vector2( 178.087, 4.49147 )
+custom_fonts/font = ExtResource( 1 )
+text = "Game Setting"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="VBoxContainer/Button" to="VBoxContainer/Button" method="on_Start"]
 [connection signal="pressed" from="CC" to="VBoxContainer/Button" method="on_Credit"]
 [connection signal="pressed" from="CC2" to="VBoxContainer/Button" method="_on_CC2_pressed"]
+[connection signal="pressed" from="CC3" to="VBoxContainer/Button" method="_on_CC3_pressed"]

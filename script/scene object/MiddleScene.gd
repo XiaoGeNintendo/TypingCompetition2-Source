@@ -1,10 +1,14 @@
 extends Control
 
 var state=0
-const PHASE_TIME=60
-var time=PHASE_TIME
-onready var glb=get_node("/root/Global")
+var glb
+var PHASE_TIME
+var time
 func _ready():
+	glb=get_node("/root/Global")
+	PHASE_TIME=glb.phaseLength
+	time=PHASE_TIME
+	
 	$Tween.interpolate_property($Label,"custom_colors/font_color",Color.green,Color.red,PHASE_TIME)
 	$Tween.start()
 	glb.incMana=2

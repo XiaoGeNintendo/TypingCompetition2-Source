@@ -4,7 +4,7 @@ class_name Keiki
 
 func onSkillA(me,sub,enemy,es,scene,isSub):
 	if isSub:
-		me.skillCost=max(int(sub.skillCost/2),1)
+		me.skillCost=max(int(me.skillCost/2),1)
 	else:
 		sub.skillCost=max(int(sub.skillCost/2),1)
 
