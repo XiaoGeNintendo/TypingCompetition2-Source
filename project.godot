@@ -35,6 +35,11 @@ _global_script_classes=[ {
 "path": "res://script/characters/Groups/HSiFS/Aunn.gd"
 }, {
 "base": "CharacterBase",
+"class": "Ball",
+"language": "GDScript",
+"path": "res://script/characters/Groups/Main/Ball.gd"
+}, {
+"base": "CharacterBase",
 "class": "Benben",
 "language": "GDScript",
 "path": "res://script/characters/Groups/DDC/Benben.gd"
@@ -635,6 +640,7 @@ _global_script_class_icons={
 "AkiBuff": "",
 "Alice": "",
 "Aunn": "",
+"Ball": "",
 "Benben": "",
 "Byakuren": "",
 "CharGroup": "",

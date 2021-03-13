@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://font.tres" type="DynamicFont" id=1]
 [ext_resource path="res://script/scene object/Credit Button.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Russell Square Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+use_mipmaps = true
+font_data = SubResource( 1 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -15,7 +23,7 @@ margin_left = 6.35681
 margin_top = 19.0703
 margin_right = 288.357
 margin_bottom = 588.07
-custom_fonts/font = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Pressing Competition 2
 A production of HHS 2021
 -=Code & Character Design=-
@@ -23,6 +31,7 @@ XGN
 
 -=Music=-
 HDD
+Zzzyt
 
 -=Playtest=-
 Monkey king
