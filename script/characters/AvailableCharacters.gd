@@ -13,5 +13,6 @@ var chars=[
 	DDCGroup.new(),
 	LoLKGroup.new(),
 	HSiFSGroup.new(),
-	WBaWCGroup.new()
+	WBaWCGroup.new(),
+	UMGroup.new()
 ]

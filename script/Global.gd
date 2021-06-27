@@ -10,5 +10,5 @@ var death = 0 #Sudden Death mode
 
 # Config Element
 var phaseLength = 60
-var musicVol = 100
+var musicVol = 0
 var HPMul = 1

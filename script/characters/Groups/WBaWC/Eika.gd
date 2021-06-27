@@ -15,5 +15,5 @@ func _init():
 	self.version=1
 	self.desc="""
 Skill: Stone Stacker
-Increase enemy's minion's cost by 100
+Increase enemy minion's cost by 100
 """
